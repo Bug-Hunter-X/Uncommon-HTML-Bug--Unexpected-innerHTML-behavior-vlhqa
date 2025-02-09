@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug Solution</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text should be visible.
+  </div>
+  <script>
+    // Correct approach using insertAdjacentHTML to append without replacing the entire content
+    const myDiv = document.getElementById("myDiv");
+    myDiv.insertAdjacentHTML('beforeend', '<p>This text is appended without replacing the original content.<br>This is a second paragraph.</p>');
+  </script>
+</body>
+</html>
